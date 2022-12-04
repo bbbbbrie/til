@@ -1,4 +1,4 @@
-name: Build README and deploy Datasette
+name: Build README and deploy via Datasette
 
 on:
   push:
