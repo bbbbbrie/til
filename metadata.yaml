@@ -1,6 +1,6 @@
 title: Today I Learned
-about: simonw/til
-about_url: https://github.com/simonw/til
+about: bbbbbrie/til
+about_url: https://github.com/bbbbbrie/til
 plugins:
   datasette-atom:
     allow_unsafe_html_in_canned_queries: true
@@ -37,13 +37,13 @@ databases:
         title: Simon Willison TIL
         sql: |-
           SELECT
-            'tag:til.simonwillison.net,2020-04-30:' || path as atom_id,
+            'tag:til.brie.dev,2020-04-30:' || path as atom_id,
             title as atom_title,
-            'https://til.simonwillison.net/' || topic || '/' || slug as atom_link,
+            'https://til.brie.dev/' || topic || '/' || slug as atom_link,
             created_utc as atom_updated,
             html as atom_content_html,
             'Simon Willison' as atom_author_name,
-            'https://simonwillison.net/' as atom_author_uri
+            'https://brie.dev/' as atom_author_uri
           FROM
             til
           order by
@@ -54,13 +54,13 @@ databases:
         title: Simon Willison TIL for topic
         sql: |-
           SELECT
-            'tag:til.simonwillison.net,2020-04-30:' || path as atom_id,
+            'tag:til.brie.dev,2020-04-30:' || path as atom_id,
             title as atom_title,
-            'https://til.simonwillison.net/' || topic || '/' || slug as atom_link,
+            'https://til.brie.dev/' || topic || '/' || slug as atom_link,
             created_utc as atom_updated,
             html as atom_content_html,
             'Simon Willison' as atom_author_name,
-            'https://simonwillison.net/' as atom_author_uri
+            'https://brie.dev/' as atom_author_uri
           FROM
             til
           where
