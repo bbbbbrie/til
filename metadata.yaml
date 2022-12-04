@@ -34,7 +34,7 @@ databases:
         order by
           til_fts.rank limit 20
       feed:
-        title: Simon Willison TIL
+        title: Brie Carranza TIL
         sql: |-
           SELECT
             'tag:til.brie.dev,2020-04-30:' || path as atom_id,
@@ -42,7 +42,7 @@ databases:
             'https://til.brie.dev/' || topic || '/' || slug as atom_link,
             created_utc as atom_updated,
             html as atom_content_html,
-            'Simon Willison' as atom_author_name,
+            'Brie Carranza' as atom_author_name,
             'https://brie.dev/' as atom_author_uri
           FROM
             til
@@ -51,7 +51,7 @@ databases:
           limit
             15
       feed_by_topic:
-        title: Simon Willison TIL for topic
+        title: Brie Carranza TIL for topic
         sql: |-
           SELECT
             'tag:til.brie.dev,2020-04-30:' || path as atom_id,
@@ -59,7 +59,7 @@ databases:
             'https://til.brie.dev/' || topic || '/' || slug as atom_link,
             created_utc as atom_updated,
             html as atom_content_html,
-            'Simon Willison' as atom_author_name,
+            'Brie Carranza' as atom_author_name,
             'https://brie.dev/' as atom_author_uri
           FROM
             til
