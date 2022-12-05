@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->4<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->5<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -15,6 +15,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 * [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 * [Datasette has GraphiQL built in!](https://github.com/bbbbbrie/til/blob/main/datasette/graphql-built-in.md) - 2022-12-05
+
+## javascript
+
+* [Pop-up emoji picker](https://github.com/bbbbbrie/til/blob/main/javascript/pop-up-emoji-picker.md) - 2022-12-05
 
 ## jq
 
