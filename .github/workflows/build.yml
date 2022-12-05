@@ -82,7 +82,7 @@ jobs:
         wget https://latest.datasette.io/fixtures.db
         datasette publish vercel tils.db fixtures.db \
           --token $NOW_TOKEN \
-          --project til-brie-dev \
+          --project til \
           --scope datasette \
           --metadata metadata.yaml \
           --static static:static \
