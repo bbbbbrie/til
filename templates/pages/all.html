@@ -9,7 +9,7 @@
 
 <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">View <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">all</mark> of Brie's TILs</h1>
 
-<p class="mb-3 font-light text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">Hello, world! 👋 This page lists every TIL snipet I've assembled since I started this project in December 2022. Sometimes, I write about something that I <b>remembered</b> rather than something I learned.</p>
+<p class="mb-3 font-light text-gray-500  first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">Hello, world! 👋 This page lists every TIL snipet I've assembled since I started this project in December 2022. Sometimes, I write about something that I <b>remembered</b> rather than something I learned.</p>
 
 
 
@@ -29,11 +29,11 @@
 
 
 {% for row in sql("select topic from til group by topic order by max(created_utc) desc", database="tils") %}
-    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We invest in the <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{{ row.topic }}</span></h2>
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">On the topic of...<span class="underline underline-offset-3 decoration-8 decoration-blue-400">{{ row.topic }}</span></h2>
 
     <ul>
         {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic": row.topic}, database="tils") %}
-            <li><a href="/{{ til.topic }}/{{ til.slug }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"  >{{ til.title }}</a> - {{ til.created[:10] }}</li>
+            <li><a href="/{{ til.topic }}/{{ til.slug }}" class="font-semibold text-gray-900 underline  decoration-indigo-500"  >{{ til.title }}</a> - {{ til.created[:10] }}</li>
         {% endfor %}
     </ul>
 {% endfor %}
