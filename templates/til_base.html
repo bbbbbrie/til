@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{% endblock %}</title>
 <script defer data-domain="til.simonwillison.net" src="https://plausible.io/js/plausible.js"></script>
+
+<!--
+  TAILWIND -->
+ <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pinkpower: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+<!--
+END TAILWIND -->
+
+
+
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/tils/feed.atom">
 {% block extra_head %}{% endblock %}
 <style>
