@@ -66,7 +66,7 @@ jobs:
         git diff
         git config --global user.email "actions@users.noreply.github.com"
         git config --global user.name "README-bot"
-        git diff --quiet || (git add README.md && git commit -m "Updated README")
+        git diff --quiet || (git add README.md && git commit -m "🤖 Beep boop: Updated README")
         git push
     - name: Upload latest tils.db to the S3 bucket
       env:
