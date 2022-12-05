@@ -83,7 +83,7 @@ jobs:
         datasette publish vercel tils.db fixtures.db \
           --token $NOW_TOKEN \
           --project til \
-          --scope datasette \
+          --scope briecarranza-gmailcom \
           --metadata metadata.yaml \
           --static static:static \
           --install datasette-template-sql \
