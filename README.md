@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->3<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->4<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -13,6 +13,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## datasette
 
+* [Datasette has GraphiQL built in!](https://github.com/bbbbbrie/til/blob/main/datasette/graphql-built-in.md) - 2022-12-05
 * [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 
 ## jq
