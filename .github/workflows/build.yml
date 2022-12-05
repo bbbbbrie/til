@@ -47,11 +47,11 @@ jobs:
       run: |-
         cd main
         python build_database.py
-    - name: Soundness check
+    - name: Make sure everything works with datasette get
       run: |-
         cd main
         datasette . --get / | grep "Brie Carranza: TIL"
-    - name: Generate missing screenshots
+    - name: 🖼️ Generate missing screenshots
       run: |-
         cd main
         python generate_screenshots.py
@@ -68,7 +68,7 @@ jobs:
         git config --global user.name "README-bot"
         git diff --quiet || (git add README.md && git commit -m "🤖 Beep boop: Updated README")
         git push
-    - name: Upload latest tils.db to the S3 bucket
+    - name: 🔼 Upload latest tils.db to the S3 bucket
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
