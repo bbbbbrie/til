@@ -50,8 +50,18 @@ h1 {
 
 {% block body %}
 {% set til_count = sql("select count(*) from TIL", database="tils")[0][0] %}
-<h1  >Brie Carranza: TIL</h1>
-<p>Things I've learned, collected in <a href="https://github.com/bbbbbrie/til">bbbbbrie/til</a>. You may also enjoy <a href="https://brie.dev/">my blog</a>.</p>
+
+
+<div id="everybody" class="w-full">
+    <section class="bg-white">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="max-w-screen-lg  sm:text-lg ">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">Welcome to things <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Brie</mark> learned!</h1>
+            <p>The structure for this site is based on <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://til.simonwillison.net/">Simon Willison's</a> TIL project. I forked his work and then added Tailwind, Flowbite and lots of emoji. 
+                The source for these snippets is collected in the <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/bbbbbrie/til">bbbbbrie/til</a> repository. You may also enjoy <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://brie.dev/">my blog</a>.</p>
+           </div>
+      </div>
+
 
 <p><a style="text-decoration: none" href="/tils/feed.atom" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
     <defs>
