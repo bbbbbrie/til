@@ -104,11 +104,19 @@ h1 {
 {% endfor %}
 </p>
 
-<h2 class="text-4xl font-bold">Recent TILs</h2>
+<h2 class="text-4xl font-bold text-blue-500">Recent TILs</h2>
 
 {% for til in sql("select * from til order by created_utc desc limit 30", database="tils") %}
-    <h3><span class="topic"><a href="/{{ til.topic }}">{{ til.topic }}</a></span> <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
+    <h3 class=" font-light text-gray-500 "><span>
+        <a class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300" href="/{{ til.topic }}">{{ til.topic }}</a></span> <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - 
+        
+        
+        {{ til.created[:10] }}</h3>
+
+
     {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
+    <hr class="">
+
 {% endfor %}
 
 
