@@ -4,12 +4,16 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->6<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->7<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
 
 * [Configure an S3 bucket for public Internet consumption](https://github.com/bbbbbrie/til/blob/main/aws/configure-s3-web.md) - 2022-12-04
+
+## curl
+
+* [TIL that curlconverter.com exists](https://github.com/bbbbbrie/til/blob/main/curl/curlconverter.com.md) - 2022-12-05
 
 ## datasette
 
