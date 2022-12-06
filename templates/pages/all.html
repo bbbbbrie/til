@@ -23,12 +23,8 @@ Hello, world! 👋 This page lists every TIL snippet I've assembled since I star
 </div>
 </section>
 
-
 <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
-
-
-
-{% for row in sql("select topic from til group by topic order by max(created_utc) desc", database="tils") %}
+{% for row in sql("select topic from til group by topic order by topic asc", database="tils") %}
     <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 ">
         On the topic of <span class="underline underline-offset-3 decoration-8 decoration-blue-400 md:text-3xl lg:text-4xl">{{ row.topic }}</span>...</h4>
     <ul>
@@ -36,8 +32,6 @@ Hello, world! 👋 This page lists every TIL snippet I've assembled since I star
             <li><a href="/{{ til.topic }}/{{ til.slug }}" class="font-semibold text-gray-900 underline  decoration-indigo-500"  >{{ til.title }}</a> - {{ til.created[:10] }}</li>
         {% endfor %}
     </ul>
-
-
 </div>
 
 {% endfor %}
