@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - 'github/**'
+    - main
 
 jobs:
   build:
