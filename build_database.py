@@ -14,7 +14,8 @@ root = pathlib.Path(__file__).parent.resolve()
 def created_changed_times(repo_path, ref="main"):
     created_changed_times = {}
     repo = git.Repo(repo_path, odbt=git.GitDB)
-    commits = reversed(list(repo.iter_commits(ref)))
+#    commits = reversed(list(repo.iter_commits(ref)))
+    commits = reversed(list(repo.iter_commits()))
     for commit in commits:
         dt = commit.committed_datetime
         affected_files = list(commit.stats.files.keys())
