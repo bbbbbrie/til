@@ -3,7 +3,7 @@ name: Build README and deploy via Datasette
 on:
   push:
     branches:
-    - main
+    - 'github/**'
 
 jobs:
   build:
