@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->7<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->8<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -20,6 +20,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 * [Datasette has GraphiQL built in!](https://github.com/bbbbbrie/til/blob/main/datasette/graphql-built-in.md) - 2022-12-05
 * [Datasette: local preview with 'get'](https://github.com/bbbbbrie/til/blob/main/datasette/local-preview.md) - 2022-12-05
+
+## gunicorn
+
+* [🐍💙💛 Reload Web app served via gunicorn when specific files change](https://github.com/bbbbbrie/til/blob/main/gunicorn/reload-when-file-changes.md) - 2022-12-07
 
 ## javascript
 
