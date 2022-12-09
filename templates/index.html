@@ -17,17 +17,18 @@ input[type=submit] {
     box-sizing: border-box;
     color: #fff;
     background-color: #007bff;
-    border-color: #007bff;
+  /*  border-color: #007bff; */
     font-weight: 400;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
-    border-width: 1px;
+   /* border-width: 1px;
     border-style: solid;
+    border-radius: .25rem; */
     padding: .5em 0.8em;
     font-size: 0.9rem;
     line-height: 1;
-    border-radius: .25rem;
+    
 }
 h1 {
     flex items-center text-5xl font-extrabold;
@@ -63,6 +64,7 @@ h1 {
       </div>
 
 
+<!-- 
 <p><a style="text-decoration: none" href="/tils/feed.atom" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
     <defs>
     <linearGradient id="a" x1=".1" x2=".9" y1=".1" y2=".9">
@@ -82,27 +84,24 @@ h1 {
 <path fill="#FFF" d="M160 213h-34a82 82 0 0 0-82-82V97a116 116 0 0 1 116 116z" />
 <path fill="#FFF" d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" />
     </svg> Atom feed</a></p>
+-->
 
+<h3 class="text-3xl font-bold">Search TIL snippets</h3>
 <form action="/tils/search">
     <p>
-        <input type="search" name="q" placeholder="Search {{ til_count }} TILs">
-        <input class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"   type="submit" value="Search">
-
-
-
-
-
-
-
-
+        <input  type="search" name="q" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="✨ Search {{ til_count }} TILs">
+        <input class="text-white bg-gradient-to-br from-fuchsia-600 to-pink-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm text-center mr-2 mb-2"   type="submit" value="✨ Search">
     </p>
 </form>
 
+
+<div class="py-8 px-4 mx-auto max-w-screen-xl">
 <p><strong>Browse by topic:</strong>
 {% for row in sql("select topic, count(*) as num_tils from til group by topic order by topic", database="tils") %}
   <a class="font-medium text-blue-600  hover:underline"      title="{{ row.num_tils }} TIL{{ "s" if row.num_tils > 1 else "" }}" href="/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
 {% endfor %}
 </p>
+</div>
 
 <h2 class="text-4xl font-bold text-blue-500">Recent TILs</h2>
 

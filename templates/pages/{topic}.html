@@ -13,7 +13,9 @@
     {{ raise_404("No TILs found") }}
 {% endif %}
 
-<h1>Brie Carranza: TILs on {{ topic }}</h1>
+<div class=" py-4">
+    <h1 class="font-bold mb-4 text-4xl font-extrabold tracking-tight leading-none">📚 All my TILs on <mark class="px-2 text-white bg-blue-600 rounded">{{ topic }}</mark></h1>
+</div>
 
 <p><a style="text-decoration: none" href="/tils/feed_by_topic.atom?topic={{ topic }}" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
     <defs>
@@ -37,7 +39,7 @@
 
 
 {% for til in tils %}
-    <h3><span class="topic">{{ til.topic }}</span> <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
+    <h3><span class="topic"><a class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300" href="/{{ til.topic }}">{{ til.topic }}</a></span> <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
     {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
 {% endfor %}
 
