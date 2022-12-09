@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->9<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->10<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -36,4 +36,8 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## jq
 
 * [Parsing emoji in JSON with jq](https://github.com/bbbbbrie/til/blob/main/jq/parsing-emoji.md) - 2022-12-04
+
+## k8s
+
+* [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
 <!-- index ends -->
