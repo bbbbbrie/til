@@ -4,12 +4,16 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->8<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->9<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
 
 * [Configure an S3 bucket for public Internet consumption](https://github.com/bbbbbrie/til/blob/main/aws/configure-s3-web.md) - 2022-12-04
+
+## csv
+
+* [Using xsv for manipulating CSVs on the CLI](https://github.com/bbbbbrie/til/blob/main/csv/xsv-for-inspecting-csvs-on-the-cli.md) - 2022-12-08
 
 ## curl
 
