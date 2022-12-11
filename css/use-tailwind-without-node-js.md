@@ -1,0 +1,25 @@
+# Use Tailwind without  Node.js
+
+I really like [Tailwind CSS](https://tailwindcss.com) -- it's beautiful! But...I _really_ don't want Node.js as a dependency. (As of this writing, I would like to replace the dependency that this very site has on Node.js.) Anyway, there's a blog post [Standalone CLI: Use Tailwind CSS without Node.js](https://tailwindcss.com/blog/standalone-cli) that might give me what I'm looking for.
+
+It works by offering a `tailwindcss` exectutable made with [pkg](https://github.com/vercel/pkg) a tool that packagse Node.js projects into an executable!
+
+This is a nice compromise because it lets me use the proper Tailwind workflow:
+
+```
+# Create a tailwind.config.js file
+./tailwindcss init
+
+# Start a watcher
+./tailwindcss -i input.css -o output.css --watch
+
+# Compile and minify your CSS for production
+./tailwindcss -i input.css -o output.css --minify
+```
+
+Let's give it a go.
+
+## Setting it up
+
+
+  
