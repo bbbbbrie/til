@@ -11,6 +11,20 @@ input[type=search] {
     width: 60%;
 }
 
+a.howdy {
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #007bff;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    padding: .5em 0.8em;
+    font-size: 0.9rem;
+    line-height: 1;   
+
+}
+
 input[type=submit] {
     box-sizing: border-box;
     color: #fff;
@@ -29,84 +43,38 @@ input[type=submit] {
 {% block body %}
 {% set til_count = sql("select count(*) from TIL", database="tils")[0][0] %}
 
-
-<div class="page-header" >
-    <div class="title">
-        <p>        <i class="fa fa-heart"></i> TIL </p> 
+<div id="welcome-brie">
+<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">    Welcome to things <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Brie</mark> learned!</h1>
+<p>The structure for this site is based on <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://til.simonwillison.net/">Simon Willison's</a> TIL project. I forked his work and then added Tailwind, Flowbite and lots of emoji. 
+    The source for these snippets is collected in the <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/bbbbbrie/til">bbbbbrie/til</a> repository. You may also enjoy <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://brie.dev/">my blog</a>.</p>
+    <h3 class="text-3xl font-bold">Search TIL snippets</h3>
+    <form action="/tils/search">
+        <p>
+            <input  type="search" name="q" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="✨ Search {{ til_count }} TILs">
+            <input class="text-white bg-gradient-to-br from-fuchsia-600 to-pink-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm text-center mr-2 mb-2"   type="submit" value="✨ Search">
+        </p>
+    </form>
+    <div id="browse-tils">
+        <p><strong>Browse by topic:</strong>
+        {% for row in sql("select topic, count(*) as num_tils from til group by topic order by topic", database="tils") %}
+          <a class="font-medium text-blue-600  hover:underline"      title="{{ row.num_tils }} TIL{{ "s" if row.num_tils > 1 else "" }}" href="/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
+        {% endfor %}
+        </p>
     </div>
-    
-    <input type="checkbox" id="toggle-menu">
-    <label class="menu-icon" for="toggle-menu">
-        <a id="menu-icon">
-            <i class="fa fa-bars"></i>
-        </a>
-    </label>
-    
-    <div id="navigation-bar" class="nav-bar">
-        <a href="/" class="active"> HOME </a>
-        <a href="/all"> ALL </a>
-      
-    </div>    
-
-
-    
+    <div id="recent-tils">
+        <h2 class="text-4xl font-bold text-blue-500">Recent TILs</h2>
+        {% for til in sql("select * from til order by created_utc desc limit 30", database="tils") %}
+            <h5 class="font-light text-gray-500 "><span>
+                <a class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300" href="/{{ til.topic }}">{{ til.topic }}</a></span> <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - 
+                {{ til.created[:10] }}</h5>
+            {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
+            <hr class="">
+        {% endfor %}
+    </div>
+    <div id="browse-tils">
+        <a class="howdy" href="/all" >Browse all {{ til_count }} TILs</a>
+    </input>
+    </div>
 </div>
-
-
-<div id="everybody" class="w-full">
-    <section class="bg-white">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div class="max-w-screen-lg  sm:text-lg ">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">Welcome to things <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Brie</mark> learned!</h1>
-            <p>The structure for this site is based on <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://til.simonwillison.net/">Simon Willison's</a> TIL project. I forked his work and then added Tailwind, Flowbite and lots of emoji. 
-                The source for these snippets is collected in the <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/bbbbbrie/til">bbbbbrie/til</a> repository. You may also enjoy <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://brie.dev/">my blog</a>.</p>
-           </div>
-      </div>
-
-
-
-<h3 class="text-3xl font-bold">Search TIL snippets</h3>
-<form action="/tils/search">
-    <p>
-        <input  type="search" name="q" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="✨ Search {{ til_count }} TILs">
-        <input class="text-white bg-gradient-to-br from-fuchsia-600 to-pink-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm text-center mr-2 mb-2"   type="submit" value="✨ Search">
-    </p>
-</form>
-
-
-<div class="py-8 px-4 mx-auto max-w-screen-xl">
-<p><strong>Browse by topic:</strong>
-{% for row in sql("select topic, count(*) as num_tils from til group by topic order by topic", database="tils") %}
-  <a class="font-medium text-blue-600  hover:underline"      title="{{ row.num_tils }} TIL{{ "s" if row.num_tils > 1 else "" }}" href="/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
-{% endfor %}
-</p>
-</div>
-
-<h2 class="text-4xl font-bold text-blue-500">Recent TILs</h2>
-
-{% for til in sql("select * from til order by created_utc desc limit 30", database="tils") %}
-    <h5 class="font-light text-gray-500 "><span>
-        <a class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300" href="/{{ til.topic }}">{{ til.topic }}</a></span> <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - 
-        
-        
-        {{ til.created[:10] }}</h5>
-
-
-    {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
-    <hr class="">
-
-{% endfor %}
-
-
-
-<div class="w-full">
-    <section class="bg-white">
-      <div class="py-8  mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-          <div class="max-w-screen-lg  sm:text-lg ">
-            <a href="/all" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5  py-2.5 mr-2 mb-2  focus:outline-none">Browse all {{ til_count }} TILs</a>
-          </div>
-      </div>
-    </section>
-</div>
-
+<hr>
 {% endblock %}
