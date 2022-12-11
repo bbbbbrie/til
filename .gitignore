@@ -1,2 +1,7 @@
 v/
 fixtures.db
+__pycache__/
+.swp
+.DS_Store
+pullme.sh
+pushme.sh
