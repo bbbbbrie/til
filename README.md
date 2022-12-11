@@ -27,7 +27,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## gunicorn
 
-* [🐍💙💛 Reload Web app served via gunicorn when specific files change](https://github.com/bbbbbrie/til/blob/main/gunicorn/reload-when-file-changes.md) - 2022-12-07
+* [Reload app served via gunicorn when specific files change](https://github.com/bbbbbrie/til/blob/main/gunicorn/reload-when-file-changes.md) - 2022-12-07
 
 ## javascript
 
