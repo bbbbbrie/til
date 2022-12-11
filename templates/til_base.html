@@ -108,7 +108,9 @@ themeToggleBtn.addEventListener('click', function() {
 
 <!-- END DARK MODE -->
 
-<link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+
+<script src="/static/mobile-menu.js"></script>
+<link rel="stylesheet" href="/static/mustard-ui.min.css">
 
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/tils/feed.atom">
 {% block extra_head %}{% endblock %}
@@ -123,9 +125,11 @@ body {
     margin: 0;
     padding: 0;
 }
+/*
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+*/
 .created {
     border-top: 1px solid #ccc;
     padding-top: 1em;
@@ -153,8 +157,6 @@ section.body {
 a, pre, code {
     overflow-wrap: break-word;
 }
-
-
 table {
     border-collapse: collapse;
 }
@@ -178,23 +180,157 @@ blockquote {
     border-left: 0.75em solid #9e6bb52e;
     padding-left: 0.75em;
 }
+
+/* GH 
+https://raw.githubusercontent.com/KunalN25/responsive-navbar/without_javascript/styles.css
+
+*/
+
+
+:root {
+    --bgcolor: #3B82F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    background-color: var(--bgcolor);
+    /* width: 100%; */
+    /* height: 5%; */
+    /* overflow: hidden;
+        padding: 1.0rem;
+    */
+
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    align-self: center;
+    /* font-size: 1.2rem; */
+    margin-left: 1.2rem;
+}
+
+.nav-bar {
+    /* background-color: #ffffff; */
+    /* border: solid red; */   
+}
+
+.nav-bar a   {
+    color: white;
+    /* margin-right: 2rem; */
+    padding: 1.3rem;
+    cursor: pointe  r;
+}
+
+.nav-bar a:hover {
+    background-color: #93C5FD;
+}
+
+.nav-bar a.active {
+    color: #3B82F6;
+    background-color: white;
+    text-decoration: underline dotted #3B82F6;
+}
+
+.menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+
+.navbar h2 {
+    color: #ffffff;
+    font: x-large;
+}
+
+
+@media screen and (max-width: 700px) {
+
+
+    .nav-bar {
+        /* visibility: hidden; */
+        
+        /* flex-direction: column; */
+        display: none;
+        position: absolute;
+        top: 3.7rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor);
+        text-align: center;
+        
+
+    }
+
+  
+    
+
+    .nav-bar a {
+        /* visibility: hidden; */
+        /* display: none;  */
+        display: block;
+
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1;
+        /* position: absolute;
+        top:0;
+        right: 0; */
+
+    }
+
+    #toggle-menu:checked ~ .nav-bar {
+        display: block;
+    }
+
+}
+
+
+
 </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
 
 
-<!-- better nav?
 
+
+
+
+
+<!-- better nav?
 
 <header>
 <nav class="bg-white border-gray-200  py-2.5 dark:bg-gray-800">
             <div class="flex flex-wrap mx-auto max-w-screen-xl py-8 mx-auto max-w-screen-xl">
                <a href="/" class="flex">
-               <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
+
+                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
+
+                <!-- 
                 <span class="text-xl font-semibold whitespace-nowrap dark:text-white">TIL</span>
                </a>
+
+
+-->
+
+
 <!--            
             
             <div class="flex items-center lg:order-2">
@@ -239,11 +375,15 @@ blockquote {
 
 
 
+<!-- 
+<section class="body" >
+-->
 
-<section class="body">
 {% block body %}{% endblock %}
-</section>
 
+<!-- 
+</section>
+-->
 <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 
 
