@@ -5,3 +5,5 @@ It's possible to read changes to `.screenrc` config without needing to restart `
 
 - `Ctrl` + `a`
 - `: source ~/.screenrc`
+
+I wrote about this a [few years ago](https://gitlab.com/brie/dotfiles). 
