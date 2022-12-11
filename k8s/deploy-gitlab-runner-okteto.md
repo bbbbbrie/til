@@ -14,7 +14,7 @@ helm repo add gitlab https://charts.gitlab.io
 helm repo update gitlab
 ```
 
-Assemble `runner-chart-values.yaml`. I used something like this:
+Assemble `runner-chart-values.yaml`. I used something like what's shown below and in [this snippet](https://gitlab.com/-/snippets/2470446):
 
 ```
 gitlabUrl: https://gitlab.com/
