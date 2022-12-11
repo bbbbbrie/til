@@ -53,6 +53,29 @@ h1 {
 {% set til_count = sql("select count(*) from TIL", database="tils")[0][0] %}
 
 
+<div class="page-header" >
+    <div class="title">
+        <p>        <i class="fa fa-heart"></i> TIL </p> 
+    </div>
+    
+    <input type="checkbox" id="toggle-menu">
+    <label class="menu-icon" for="toggle-menu">
+        <a id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </label>
+    
+    <div id="navigation-bar" class="nav-bar">
+        <a href="/" class="active"> HOME </a>
+        <a href="/all"> ALL </a>
+      
+    </div>    
+
+
+    
+</div>
+
+
 <div id="everybody" class="w-full">
     <section class="bg-white">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -106,11 +129,11 @@ h1 {
 <h2 class="text-4xl font-bold text-blue-500">Recent TILs</h2>
 
 {% for til in sql("select * from til order by created_utc desc limit 30", database="tils") %}
-    <h3 class=" font-light text-gray-500 "><span>
+    <h5 class="font-light text-gray-500 "><span>
         <a class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300" href="/{{ til.topic }}">{{ til.topic }}</a></span> <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - 
         
         
-        {{ til.created[:10] }}</h3>
+        {{ til.created[:10] }}</h5>
 
 
     {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
