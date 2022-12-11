@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->13<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->14<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -45,6 +45,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 * [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
 * [Creating kubectl plugins](https://github.com/bbbbbrie/til/blob/main/k8s/creating-kubectl-plugins.md) - 2022-12-09
+
+## linux
+
+* [Reload the screenrc config -- without leaving screen](https://github.com/bbbbbrie/til/blob/main/linux/reload-screenrc-in-same-session.md) - 2022-12-11
 
 ## saml
 
