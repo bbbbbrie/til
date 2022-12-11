@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->10<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->11<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -40,4 +40,5 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## k8s
 
 * [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
+* [Creating kubectl plugins](https://github.com/bbbbbrie/til/blob/main/k8s/creating-kubectl-plugins.md) - 2022-12-09
 <!-- index ends -->
