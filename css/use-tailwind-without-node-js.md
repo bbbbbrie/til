@@ -10,11 +10,13 @@ This is a nice compromise because it lets me use the proper Tailwind workflow:
 # Create a tailwind.config.js file
 ./tailwindcss init
 
+touch static/input.css
+
 # Start a watcher
-./tailwindcss -i input.css -o output.css --watch
+./tailwindcss -i static/input.css -o static/output.css --watch
 
 # Compile and minify your CSS for production
-./tailwindcss -i input.css -o output.css --minify
+./tailwindcss -i static/input.css -o static/output.css --minify
 ```
 
 Let's give it a go.
