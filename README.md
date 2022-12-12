@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->14<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->15<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -53,4 +53,8 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## saml
 
 * [Auth0 Code Samples: SAML Service Provider on laptop in 10 minutes](https://github.com/bbbbbrie/til/blob/main/saml/auth0-code-samples.md) - 2022-12-11
+
+## sqlite
+
+* [ORDER BY 1 NULLS LAST](https://github.com/bbbbbrie/til/blob/main/sqlite/order-by-1-nulls-last.md) - 2022-12-11
 <!-- index ends -->
