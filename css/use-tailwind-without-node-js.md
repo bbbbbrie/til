@@ -19,9 +19,6 @@ touch static/input.css
 ./tailwindcss -i static/input.css -o static/output.css --minify
 ```
 
-Let's give it a go.
+Let's give it a go...it works!
 
-## Setting it up
-
-
-  
+This works through the 🪄 magic of the pkg project by the dine folks at Vercel. It looks like `pkg` does not play nicely with `puppeteer` just yet.
