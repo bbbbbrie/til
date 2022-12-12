@@ -1,6 +1,6 @@
 # Auth0 Code Samples: SAML Service Provider on laptop in 10 minutes
 
-The [code samples](https://developer.auth0.com/resources/code-samples) provided by Auth0 (and the accompany documentation) are excellent! I was able to spin up an app to act as an SP (Service Provider) on my laptop. Users in the generous Auth0 tier are able to log in. 
+The [code samples](https://developer.auth0.com/resources/code-samples) provided by Auth0 (and the accompanying documentation) are excellent! I was able to spin up an app to act as an SP (Service Provider) on my laptop. Users in the generous Auth0 tier are able to log in. 
 
 The tutorial I followed is:
 
