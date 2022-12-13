@@ -1,10 +1,15 @@
-# 
+# Deep Dive: queries and search filters with ldapsearch
 
-I really love `ldapsearch` but I mostly use it to get in, solve the problem and move on. I wanted to take a moment to get to know `ldapsearch` just a little bit better. As of December 2022, the fine folks at ForumSys host an [onlne test LDAP server](https://www.forumsys.com/2022/05/10/online-ldap-test-server/). The documentation about it is pretty light but that's OK: it's a great environment to be curious in and we have enough information to get started. 
+I really love `ldapsearch` but I mostly use it to get in, solve the problem and move on. I wanted to take a moment to get to know `ldapsearch` just a little bit better. You can follow along and run all of these commands and inspect the output yourself! I'm using the [onlne test LDAP server](https://www.forumsys.com/2022/05/10/online-ldap-test-server/) maintained by the fine folks at Forumsys. The documentation about it is pretty light but that's OK: it's a great environment to be curious in and we have enough information to get started. 
 
-In this guide, I will use group and OU (organizational unit) to mean the same thing. Humans understand the term group much more readily than OU. I assume you have `ldapsearch` installed and a basic understanding of what LDAP is to get started. 
 
-## Let's go! 
+## Assumptions 
+
+In this guide, I will use group and OU (organizational unit) to mean the same thing. Humans understand the term group much more readily than OU. 
+
+I assume you have `ldapsearch` installed and a basic understanding of what LDAP is to get started. 
+
+## Queries: let's go! 
 
 Since we can both access the same server, let's learn a bit more about `ldapsearch` together and see what fun queries we can come up with!
 
@@ -69,13 +74,69 @@ cn: Italians
 
 Cool: we have learned two CNs that we can use later. 
 
-## LDAP Search Filters
+## Let's keep going: LDAP Search Filters!
 
 We got a lot done with those `ldapsearch` commands! To get more out of our time with `ldapsearch`, let's learn about LDAP search filters. The syntax should be a little bit more accessible now that we've been looking at LDAP output. We know that group `italians` exists and has a common name (CN) of `Italians`. We should be able to search for it and find it with just that information and an LDAP search filter!
 
 ```
 ldapsearch -h ldap.forumsys.com -p 389 -D cn=read-only-admin,dc=example,dc=com     -w password -b "dc=example,dc=com" "(cn=Italians)"
 ``` 
+
+The search filter part is `"(cn=Italians)"`. You'll note that the output produced by `ldapsearch` tells you what it thinks it heard you say:
+
+```
+# LDAPv3
+# base <dc=example,dc=com> with scope subtree
+# filter: (cn=Italians)
+# requesting: ALL
+```
+
+Let's take a look at some of the [basic LDAP queries](https://support.google.com/cloudidentity/answer/6126589?hl=en#zippy=%2Cbasic-ldap-queries) in Google's Cloud Identity documentation. 
+
+Show me all all of the people:
+
+```
+ldapsearch -h ldap.forumsys.com -p 389 -D cn=read-only-admin,dc=example,dc=com     -w password -b "dc=example,dc=com"     "(objectClass=person)"
+```
+
+Show me every object that is a person with an email address that ends with `@ldap.forumsys.com`:
+
+```
+ldapsearch -h ldap.forumsys.com -p 389 -D cn=read-only-admin,dc=example,dc=com     -w password -b "dc=example,dc=com"   "(&(objectClass=person)(mail=*@ldap.forumsys.com))" mail
+```
+
+In the results, we see:
+
+```
+# numResponses: 14
+# numEntries: 13
+```
+
+That means that there are some users that we did not find. We can find them pretty easily by looking for every person with an email address that does not end with `@ldap.forumsys.com` by negating the search. 
+
+```
+ldapsearch -h ldap.forumsys.com -p 389 -D cn=read-only-admin,dc=example,dc=com     -w password -b "dc=example,dc=com"   "(&(objectClass=person)(!(mail=*@ldap.forumsys.com)))" mail
+```
+
+The `!` character is what negates the search. The search filter went from this:
+
+```
+"(&(objectClass=person)(mail=*@ldap.forumsys.com))"
+```
+
+to this:
+
+```
+"(&(objectClass=person)(!(mail=*@ldap.forumsys.com)))" 
+```
+
+We added `!(` before the `mail` search and the `)` behind it. 
+
+Find all people with the last name/surname `training`:
+
+```
+ldapsearch -h ldap.forumsys.com -p 389 -D cn=read-only-admin,dc=example,dc=com     -w password -b "dc=example,dc=com"   "(|(&(objectClass=person)(sn=training)))"
+```
 
 
 ## READmore
