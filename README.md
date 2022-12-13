@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->15<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->16<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -45,6 +45,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 * [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
 * [Creating kubectl plugins](https://github.com/bbbbbrie/til/blob/main/k8s/creating-kubectl-plugins.md) - 2022-12-09
+
+## ldap
+
+* [Deep Dive: queries and search filters with ldapsearch](https://github.com/bbbbbrie/til/blob/main/ldap/ldapsearch-with-forumsys-test-server.md) - 2022-12-12
 
 ## linux
 
