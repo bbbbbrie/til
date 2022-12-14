@@ -2,9 +2,20 @@
 
 I really like [Tailwind CSS](https://tailwindcss.com) -- it's beautiful! But...I _really_ don't want Node.js as a dependency. (As of this writing, I would like to replace the dependency that this very site has on Node.js.) Anyway, there's a blog post [Standalone CLI: Use Tailwind CSS without Node.js](https://tailwindcss.com/blog/standalone-cli) that might give me what I'm looking for.
 
-It works by offering a `tailwindcss` exectutable made with [pkg](https://github.com/vercel/pkg) a tool that packagse Node.js projects into an executable!
+It works by offering a `tailwindcss` exectutable made with [pkg](https://github.com/vercel/pkg) a tool that packages Node.js projects into an executable!
 
-This is a nice compromise because it lets me use the proper Tailwind workflow:
+This is a nice compromise because it lets me use the Tailwind watcher workflow.
+
+## Get it! 
+
+```
+curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+chmod +x tailwindcss-macos-arm64
+mv tailwindcss-macos-arm64 tailwindcss
+```
+
+
+## Use it!  
 
 ```
 # Create a tailwind.config.js file
