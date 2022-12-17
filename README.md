@@ -48,7 +48,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## ldap
 
-* [Deep Dive: queries and search filters with ldapsearch](https://github.com/bbbbbrie/til/blob/main/ldap/ldapsearch-with-forumsys-test-server.md) - 2022-12-12
+* [LDAP Queries and search filters with ldapsearch](https://github.com/bbbbbrie/til/blob/main/ldap/ldapsearch-with-forumsys-test-server.md) - 2022-12-12
 
 ## linux
 
