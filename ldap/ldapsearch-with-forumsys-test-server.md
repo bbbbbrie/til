@@ -1,4 +1,4 @@
-# Deep Dive: queries and search filters with ldapsearch
+# LDAP Queries and search filters with ldapsearch
 
 I really love `ldapsearch` but I mostly use it to get in, solve the problem and move on. I wanted to take a moment to get to know `ldapsearch` just a little bit better. You can follow along and run all of these commands and inspect the output yourself! I'm using the [onlne test LDAP server](https://www.forumsys.com/2022/05/10/online-ldap-test-server/) maintained by the fine folks at Forumsys. The documentation about it is pretty light but that's OK: it's a great environment to be curious in and we have enough information to get started. 
 
