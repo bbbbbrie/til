@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->20<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->21<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -29,11 +29,12 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Datasette has GraphiQL built in!](https://github.com/bbbbbrie/til/blob/main/datasette/graphql-built-in.md) - 2022-12-05
 * [Datasette: local preview with 'get'](https://github.com/bbbbbrie/til/blob/main/datasette/local-preview.md) - 2022-12-05
 * [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
+* [Configure datasette to automatically assign an available port](https://github.com/bbbbbrie/til/blob/main/datasette/datasette-automatically-assign-available-port.md) - 2022-12-27
 
 ## graphql
 
-* [Get GraphQL Snippets via GitLab GraphQL API](https://github.com/bbbbbrie/til/blob/main/graphql/get-snippets-via-graphql.md) - 2022-12-26
 * [View Security Scanners enabled in a given project via the GitLab GraphAL API](https://github.com/bbbbbrie/til/blob/main/graphql/view-security-scanners-project-gitlab-graphql-api.md) - 2022-12-26
+* [Get GraphQL Snippets via GitLab GraphQL API](https://github.com/bbbbbrie/til/blob/main/graphql/get-snippets-via-graphql.md) - 2022-12-26
 
 ## gunicorn
 
