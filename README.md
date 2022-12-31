@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->21<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->22<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -72,4 +72,8 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## sqlite
 
 * [ORDER BY 1 NULLS LAST](https://github.com/bbbbbrie/til/blob/main/sqlite/order-by-1-nulls-last.md) - 2022-12-11
+
+## ssh
+
+* [Verify your SSH key passphrase](https://github.com/bbbbbrie/til/blob/main/ssh/validate-ssh-key-passphrase.md) - 2022-12-30
 <!-- index ends -->
