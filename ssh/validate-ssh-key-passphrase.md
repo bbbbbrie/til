@@ -23,3 +23,5 @@ Load key "til-brie-dev": incorrect passphrase supplied to decrypt private key
 If things go well, you'll see the corresponding public key printed, _probably_ in a a string that starts `ssh-rsa` and contains the signature blob with an optional comment. 🎉 
 
 If there's no passphrase set, you won't be prompted. 
+
+Cool!
