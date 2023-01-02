@@ -1,7 +1,7 @@
 stages:
     - 🩻 scan
-    - 🚀 deploy
     - 🔬 observe
+    - 🚀 deploy
 
 variables:
   GIT_DEPTH: 0
