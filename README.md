@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->23<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->24<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -30,6 +30,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Datasette: local preview with 'get'](https://github.com/bbbbbrie/til/blob/main/datasette/local-preview.md) - 2022-12-05
 * [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
 * [Configure datasette to automatically assign an available port](https://github.com/bbbbbrie/til/blob/main/datasette/datasette-automatically-assign-available-port.md) - 2022-12-27
+
+## github
+
+* [Accessing a secret in a GitHub Action](https://github.com/bbbbbrie/til/blob/main/github/accessing-secrets-github-action.md) - 2023-01-02
 
 ## graphql
 
