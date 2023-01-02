@@ -68,3 +68,18 @@ browser_performance:
   stage: 🔬 observe
   variables:
     URL: https://til.brie.dev 
+  artifacts:
+    paths:
+      - sitespeed-results/
+      - performance.json
+    reports:
+      performance: performance.json
+
+pages:
+  stage: 🚀 deploy 
+  needs: ["browser_performance"]
+  script:
+    - mv sitespeed-results public
+  artifacts:
+    paths:
+      - public/
