@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->24<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->25<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -34,6 +34,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## github
 
 * [Accessing a secret in a GitHub Action](https://github.com/bbbbbrie/til/blob/main/github/accessing-secrets-github-action.md) - 2023-01-02
+
+## gitleaks
+
+* [Tell gitleaks to ignore a secret](https://github.com/bbbbbrie/til/blob/main/gitleaks/ignoring-a-secret-in-gitleaks.md) - 2023-01-02
 
 ## graphql
 
