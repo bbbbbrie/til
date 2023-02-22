@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->26<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->25<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -25,11 +25,11 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## datasette
 
-* [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 * [Datasette has GraphiQL built in!](https://github.com/bbbbbrie/til/blob/main/datasette/graphql-built-in.md) - 2022-12-05
 * [Datasette: local preview with 'get'](https://github.com/bbbbbrie/til/blob/main/datasette/local-preview.md) - 2022-12-05
-* [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
+* [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 * [Configure datasette to automatically assign an available port](https://github.com/bbbbbrie/til/blob/main/datasette/datasette-automatically-assign-available-port.md) - 2022-12-27
+* [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
 
 ## github
 
@@ -38,10 +38,6 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## gitleaks
 
 * [Tell gitleaks to ignore a secret](https://github.com/bbbbbrie/til/blob/main/gitleaks/ignoring-a-secret-in-gitleaks.md) - 2023-01-02
-
-## google cloud
-
-* [Moving in time with Custom-Time](https://github.com/bbbbbrie/til/blob/main/google cloud/custom-time-can-not-go-back-in-time.md) - 2023-01-03
 
 ## graphql
 
@@ -54,7 +50,6 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## http
 
-* [HTTP Status Line = Version + Status Code + Reason Phrase](https://github.com/bbbbbrie/til/blob/main/http/http-status-line.md) - 2022-12-17
 * [TIL about Cloudflare Radar](https://github.com/bbbbbrie/til/blob/main/http/cloudflare-radar.md) - 2022-12-31
 
 ## javascript
@@ -67,8 +62,9 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## k8s
 
-* [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
 * [Creating kubectl plugins](https://github.com/bbbbbrie/til/blob/main/k8s/creating-kubectl-plugins.md) - 2022-12-09
+* [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
+* [Using Kompose to generate Kubernetes manifests for Python Flask apps](https://github.com/bbbbbrie/til/blob/main/k8s/kompose-generate-kubernetes-manifest-for-flask-app.md) - 2023-02-22
 
 ## ldap
 
