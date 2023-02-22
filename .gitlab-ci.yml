@@ -44,10 +44,11 @@ set up python:
       - datasette publish vercel tils.db fixtures.db  --token $NOW_TOKEN         --project til        --scope briecarranza-gmailcom        --metadata metadata.yaml         --static static:static         --install datasette-template-sql         --install "datasette-sitemap>=1.0"      --install "datasette-atom>=0.7"      --install datasette-json-html         --install beautifulsoup4         --install "datasette-debug-asgi>=1.1"        --install "datasette-graphql>=0.12"      --install datasette-media         --install datasette-block-robots          --plugins-dir plugins        --template-dir templates          --public
       - git status
       - git config --global user.email "bcarranza@gitlab.com"
-      - git config --global user.name "🤖 for  Brie Carranza"
-      - git commit -m "[🤖 Beep boop: Updated README for commit $CI_COMMIT_SHORT_SHA [skip ci]" README.md || echo "No changes, nothing to commit!"
+      - git config --global user.name "Brie Carranza"
+      - ./commit.sh
+      #- git commit -m "🤖 Beep boop: Updated README for commit $CI_COMMIT_SHORT_SHA [skip ci]" README.md  ||  echo "No changes, nothing to commit!"
       - git remote rm origin && git remote add origin https://brie:${TIL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
-      # - git push -o ci.skip  origin HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
+      - git push -o ci.skip  origin HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
 
 ---
 
@@ -75,3 +76,4 @@ pages:
   artifacts:
     paths:
       - public/
+
