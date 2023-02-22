@@ -28,12 +28,12 @@ def created_changed_times(repo_path, ref="main"):
                     "created": dt.isoformat(),
                     "created_utc": dt.astimezone(timezone.utc).isoformat(),
                 }
-            created_changed_times[filepath].update(
-                {
-                    "updated": dt.isoformat(),
-                    "updated_utc": dt.astimezone(timezone.utc).isoformat(),
-                }
-            )
+                created_changed_times[filepath].update(
+                    {
+                        "updated": dt.isoformat(),
+                        "updated_utc": dt.astimezone(timezone.utc).isoformat(),
+                    }
+                )
     return created_changed_times
 
 
