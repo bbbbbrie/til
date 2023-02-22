@@ -78,7 +78,7 @@ browser_performance:
 
 pages:
   stage: 🚀 deploy 
-  needs: ["browser_performance"]
+  # needs: ["browser_performance"]
   script:
     - mv sitespeed-results public
   artifacts:
