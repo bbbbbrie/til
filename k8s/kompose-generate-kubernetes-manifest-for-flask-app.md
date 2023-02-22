@@ -1,13 +1,15 @@
 # Using Kompose to generate Kubernetes manifests for Python Flask apps
 
-  - **Input**: A Flask app that is not Kubernetes-aware
-  - **Output**: Kubernetes manifests for deploying the Flask app
+- **Input**: A Flask app that is not Kubernetes-aware
+  - **Output**: Kubernetes manifests for deploying that Flask app
 
 This sounds like a place where [kompose](https://kompose.io/) can shine. ☀️
 
-## Prerequisites
+## 🧵 Prerequisites
 
-I am going to deploy [httpmeow](https://gitlab.com/brie/httpmeow), the Flask app I built for the [HTTP Response Status Cats](https://httpcat.us) that I [wrote about in November](https://brie.dev/httpcats/). First things first: `httpmeow` is not presently Kubernetes-aware. (It doesn't need to be: it's deployed to Google Cloud Run and could _probably_ be a static site.)
+I am going to deploy [httpmeow](https://gitlab.com/brie/httpmeow), the Flask app I built for the [HTTP Response Status Cats](https://httpcat.us) that I [wrote about in November](https://brie.dev/httpcats/). That project is publicly available if you'd like to follow along. First things first: `httpmeow` is not presently packaged for use with Docker or Kubernetes. (It doesn't need to be: it's deployed to Google Cloud Run and could _probably_ be a static site.)
+
+It's simple enough that something like this will work:
 
 ```yaml
 # docker-compose.yaml
@@ -21,7 +23,7 @@ services:
       - '5000:8008'
 ```
 
-## Let's go!
+## 🚀 Let's go!
 
 There are a host of [installation options](https://kompose.io/installation/) for `kompose`. Let's use Docker; we'll need to deviate a bit from what is currently in the docs. This is what worked well for me:
 
@@ -48,7 +50,7 @@ INFO Kubernetes file "httpmeow-deployment.yaml" created
 INFO Kubernetes file "opt-default-networkpolicy.yaml" created
 ```
 
-## ...and beyond!
+## 🌈 ...and beyond!
 
 From here, you can add annotations and other adjustments to the manifests. When they are all ready to go, they can be deployed with `kubectl apply`:
 
@@ -58,4 +60,4 @@ kubectl apply -f httpmeow-service.yaml,httpmeow-deployment.yaml
 
 Depending on where you are deploying, you might want to skip the network policy.
 
-If all is well, things will be created and you can do `kubectl get deployments` and `kubectl logs deployment/httpmeow`. 
+If all is well, things will be created and you can do `kubectl get deployments` and `kubectl logs deployment/httpmeow`.
