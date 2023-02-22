@@ -21,8 +21,6 @@ def created_changed_times(repo_path, ref="main"):
         affected_files = list(commit.stats.files.keys())
         print(affected_files)
         for filepath in affected_files:
-            if filepath == "google-cloud/custom-time-can-not-go-back-in-time.md":
-                print("Neat.")
             if filepath not in created_changed_times:
                 created_changed_times[filepath] = {
                     "created": dt.isoformat(),
