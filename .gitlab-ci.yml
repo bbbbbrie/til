@@ -48,7 +48,7 @@ set up python:
       - ./commit.sh
       #- git commit -m "🤖 Beep boop: Updated README for commit $CI_COMMIT_SHORT_SHA [skip ci]" README.md  ||  echo "No changes, nothing to commit!"
       - git remote rm origin && git remote add origin https://brie:${TIL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
-      - git push -o ci.skip  origin HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
+      #- git push -o ci.skip  origin main # HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
 
 ---
 
