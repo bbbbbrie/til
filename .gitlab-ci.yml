@@ -11,6 +11,7 @@ variables:
 cache:
   paths:
     - .cache/pip
+    - node_modules/
 
 set up python:
   stage: 🚀 deploy
@@ -26,8 +27,8 @@ set up python:
       - npm i -g vercel 
       - python3 -m pip install --upgrade pip
       -  pip install -r requirements.txt
-      - curl --fail -o tils.db https://s3.us-east-2.amazonaws.com/til.brie.dev/tils.db
-      - python3 build_database.py
+      # - curl --fail -o tils.db https://s3.us-east-2.amazonaws.com/til.brie.dev/tils.db
+      - python3 build_database.py # This is our goal. 
       - datasette . --get /  | grep "Carranza"
       - python3 update_readme.py --rewrite
       - ln -s /usr/bin/python3 /usr/local/bin/python
@@ -41,28 +42,20 @@ set up python:
       - /usr/local/bin/aws s3 ls s3://$S3_BUCKET/tils.db
       - wget -S  --quiet  https://latest.datasette.io/fixtures.db
       - datasette publish vercel tils.db fixtures.db  --token $NOW_TOKEN         --project til        --scope briecarranza-gmailcom        --metadata metadata.yaml         --static static:static         --install datasette-template-sql         --install "datasette-sitemap>=1.0"      --install "datasette-atom>=0.7"      --install datasette-json-html         --install beautifulsoup4         --install "datasette-debug-asgi>=1.1"        --install "datasette-graphql>=0.12"      --install datasette-media         --install datasette-block-robots          --plugins-dir plugins        --template-dir templates          --public
+      - git status
+      - git config --global user.email "bcarranza@gitlab.com"
+      - git config --global user.name "Brie Carranza"
+      - ./commit.sh
+      #- git commit -m "🤖 Beep boop: Updated README for commit $CI_COMMIT_SHORT_SHA [skip ci]" README.md  ||  echo "No changes, nothing to commit!"
+      - git remote rm origin && git remote add origin https://brie:${TIL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
+      #- git push -o ci.skip  origin main # HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
 
-.deploy to vercel with datasette:
-  variables:
-    DEBIAN_FRONTEND: "noninteractive"
-  environment:
-    name: prod
-    url: https://til.brie.dev
-  # image: python:latest
-  image: node:19-slim
-  stage: launch
-  script: 
-    - apt-get update && apt-get install python3 python3-pip wget -y
-    - npm i -g vercel 
-    - ls -ahls tils.db
-    - python3 -m pip install --upgrade pip
-    -  pip install -r requirements.txt
-    - wget -S  --quiet  https://latest.datasette.io/fixtures.db
-    - datasette publish vercel tils.db fixtures.db  --token $NOW_TOKEN         --project til        --scope briecarranza-gmailcom        --metadata metadata.yaml         --static static:static         --install datasette-template-sql         --install "datasette-sitemap>=1.0"      --install "datasette-atom>=0.7"      --install datasette-json-html         --install beautifulsoup4         --install "datasette-debug-asgi>=1.1"        --install "datasette-graphql>=0.12"      --install datasette-media         --install datasette-block-robots          --plugins-dir plugins        --template-dir templates          --public
-
+---
 
 include:
-  template: Verify/Browser-Performance.gitlab-ci.yml
+   - template: Verify/Browser-Performance.gitlab-ci.yml
+   - template: Code-Quality.gitlab-ci.yml
+   - template: Jobs/Dependency-Scanning.gitlab-ci.yml
 
 browser_performance:
   stage: 🔬 observe
@@ -83,3 +76,4 @@ pages:
   artifacts:
     paths:
       - public/
+
