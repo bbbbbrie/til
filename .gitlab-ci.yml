@@ -2,6 +2,7 @@ stages:
     - 🩻 scan
     - 🔬 observe
     - 🚀 deploy
+    - 👽 ...and beyond
 
 variables:
   GIT_DEPTH: 0
@@ -14,6 +15,7 @@ cache:
     - node_modules/
 
 mkdocs:
+  stage: 👽 ...and beyond
   trigger:
     project: brie/mkdocstil
 
