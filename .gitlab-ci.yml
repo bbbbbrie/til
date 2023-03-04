@@ -13,7 +13,11 @@ cache:
     - .cache/pip
     - node_modules/
 
-set up python:
+mkdocs:
+  trigger:
+    project: brie/mkdocstil
+
+update TIL.brie.dev:
   stage: 🚀 deploy
   image: node:19-slim
   environment: 
