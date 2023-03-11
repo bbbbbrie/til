@@ -25,6 +25,8 @@ mkdir -p ~/gitfossils/fossildir/ ~/gitfossils/gitdir
 
 ## Fossil Setup
 
+By convention, the `.fossil` extension is used:
+
 ```
 cd ~/gitfossils/fossildir
 fossil init cats.fossil
