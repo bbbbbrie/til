@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->26<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->27<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -31,6 +31,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Hello, world with Datasette](https://github.com/bbbbbrie/til/blob/main/datasette/hello-world-datasette.md) - 2022-12-05
 * [Configure datasette to automatically assign an available port](https://github.com/bbbbbrie/til/blob/main/datasette/datasette-automatically-assign-available-port.md) - 2022-12-27
 * [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
+
+## fossil
+
+* [Use fossil to automatically push to git](https://github.com/bbbbbrie/til/blob/main/fossil/fossil-git-export.md) - 2023-03-11
 
 ## github
 
