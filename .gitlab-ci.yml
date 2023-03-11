@@ -1,5 +1,5 @@
 stages:
-    - 🩻 scan
+    - 🩻  scan
     - 🔬 observe
     - 🚀 deploy
     - 👽 ...and beyond
@@ -15,6 +15,7 @@ cache:
     - node_modules/
 
 mkdocs:
+  needs: []
   stage: 👽 ...and beyond
   trigger:
     project: brie/mkdocstil
