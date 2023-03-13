@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->27<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->30<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -35,10 +35,16 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## fossil
 
 * [Use fossil to automatically push to git](https://github.com/bbbbbrie/til/blob/main/fossil/fossil-git-export.md) - 2023-03-11
+* [Explore fossil SQLite database with Datasette](https://github.com/bbbbbrie/til/blob/main/fossil/explore-fossil-with-datasette.md) - 2023-03-11
 
 ## github
 
 * [Accessing a secret in a GitHub Action](https://github.com/bbbbbrie/til/blob/main/github/accessing-secrets-github-action.md) - 2023-01-02
+
+## gitlab
+
+* [GraphQL hello, world with Query.echo](https://github.com/bbbbbrie/til/blob/main/gitlab/query-echo.md) - 2023-03-11
+* [Create scoped project labels via GraphQL](https://github.com/bbbbbrie/til/blob/main/gitlab/create-label-graphql.md) - 2023-03-12
 
 ## gitleaks
 
