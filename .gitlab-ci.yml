@@ -25,6 +25,10 @@ check deployment:
   stage: 👽 ...and beyond
   trigger:
     project: brie/test-tils
+  rules:
+    - if: '$CI_COMMIT_MESSAGE == "🤖 Beep boop: Updated README"'
+      when: manual
+    - when: always
 
 update TIL.brie.dev:
   stage: 🚀 deploy
