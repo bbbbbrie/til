@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->31<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->33<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -32,10 +32,15 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Configure datasette to automatically assign an available port](https://github.com/bbbbbrie/til/blob/main/datasette/datasette-automatically-assign-available-port.md) - 2022-12-27
 * [Web UI for searching code with datasette and ripgrep](https://github.com/bbbbbrie/til/blob/main/datasette/webui-for-searching-code-with-datasette-and-ripgrep.md) - 2022-12-23
 
+## emoji
+
+* [Insert emoji on macOS -- without a mouse or extra software](https://github.com/bbbbbrie/til/blob/main/emoji/insert-emoji-macos-without-mouse.md) - 2023-03-18
+
 ## fossil
 
 * [Use fossil to automatically push to git](https://github.com/bbbbbrie/til/blob/main/fossil/fossil-git-export.md) - 2023-03-11
 * [Explore fossil SQLite database with Datasette](https://github.com/bbbbbrie/til/blob/main/fossil/explore-fossil-with-datasette.md) - 2023-03-11
+* [HOWTO (actually) log out of the Fossil UI](https://github.com/bbbbbrie/til/blob/main/fossil/howto-actually-logout-fossil.md) - 2023-03-18
 
 ## github
 
