@@ -4,6 +4,8 @@ about_url: https://github.com/bbbbbrie/til
 plugins:
   datasette-atom:
     allow_unsafe_html_in_canned_queries: true
+  datasette-graphql:
+    path: /-/graphql
   datasette-media:
     screenshot:
       "sql": "select shot as content, 'image/png' as content_type from til where path=:key"
