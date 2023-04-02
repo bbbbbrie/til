@@ -1,8 +1,3 @@
----
-created: 2023-03-31T20:15:18-04:00
-modified: 2023-03-31T20:15:45-04:00
----
-
 # Recover GKE kubeconfig
 
 I found myself needing to teach `kubectl` how to connect to a particular GKE cluster -- fast. ⚡️ 
