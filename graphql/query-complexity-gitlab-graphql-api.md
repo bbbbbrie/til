@@ -9,7 +9,15 @@ queryComplexity {
   }
 ```
 
-The `queryComplexity` query itself is not free.  
+The `queryComplexity` query does not require authentication and is not free.  
+
+```
+curl --request POST \
+  --url https://gitlab.example.com/api/graphql \
+  --header 'Authorization: Bearer glpat-' \
+  --header 'Content-Type: application/json' \
+  --data '{"query": "query { queryComplexity {   limit    } }"}'
+```
 
 ## 📚 READmore
 
