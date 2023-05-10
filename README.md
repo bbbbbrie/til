@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->33<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->37<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## aws
@@ -59,6 +59,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 * [View Security Scanners enabled in a given project via the GitLab GraphAL API](https://github.com/bbbbbrie/til/blob/main/graphql/view-security-scanners-project-gitlab-graphql-api.md) - 2022-12-26
 * [Get GraphQL Snippets via GitLab GraphQL API](https://github.com/bbbbbrie/til/blob/main/graphql/get-snippets-via-graphql.md) - 2022-12-26
+* [Observe query complexity with GitLab's GraphQL API](https://github.com/bbbbbrie/til/blob/main/graphql/query-complexity-gitlab-graphql-api.md) - 2023-04-15
 
 ## gunicorn
 
@@ -67,6 +68,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## http
 
 * [TIL about Cloudflare Radar](https://github.com/bbbbbrie/til/blob/main/http/cloudflare-radar.md) - 2022-12-31
+
+## imagemagick
+
+* [ImageMagick: Make image background transparent](https://github.com/bbbbbrie/til/blob/main/imagemagick/imagemagick-make-image-background-transparent.md) - 2023-04-22
 
 ## javascript
 
@@ -81,6 +86,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Creating kubectl plugins](https://github.com/bbbbbrie/til/blob/main/k8s/creating-kubectl-plugins.md) - 2022-12-09
 * [Deploy GitLab Runner to an Okteto Kubernetes Cluster](https://github.com/bbbbbrie/til/blob/main/k8s/deploy-gitlab-runner-okteto.md) - 2022-12-09
 * [Using Kompose to generate Kubernetes manifests for Python Flask apps](https://github.com/bbbbbrie/til/blob/main/k8s/kompose-generate-kubernetes-manifest-for-flask-app.md) - 2023-02-22
+* [Recover GKE kubeconfig](https://github.com/bbbbbrie/til/blob/main/k8s/recover-gke-kubeconfig.md) - 2023-03-31
 
 ## ldap
 
@@ -88,6 +94,7 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 ## linux
 
+* [Specify the time zone to use with the date command](https://github.com/bbbbbrie/til/blob/main/linux/specify-time-zone-date-command.md) - 2023-05-10
 * [Reload the screenrc config -- without leaving screen](https://github.com/bbbbbrie/til/blob/main/linux/reload-screenrc-in-same-session.md) - 2022-12-11
 
 ## saml
