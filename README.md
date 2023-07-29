@@ -4,9 +4,13 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->37<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->40<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
+## ansible
+
+* [Generate sample ansible.cfg config file](https://github.com/bbbbbrie/til/blob/main/ansible/generate-sample-ansible-cfg-file.md) - 2023-05-13
+
 ## aws
 
 * [Configure an S3 bucket for public Internet consumption](https://github.com/bbbbbrie/til/blob/main/aws/configure-s3-web.md) - 2022-12-04
@@ -41,6 +45,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 * [Use fossil to automatically push to git](https://github.com/bbbbbrie/til/blob/main/fossil/fossil-git-export.md) - 2023-03-11
 * [Explore fossil SQLite database with Datasette](https://github.com/bbbbbrie/til/blob/main/fossil/explore-fossil-with-datasette.md) - 2023-03-11
 * [HOWTO (actually) log out of the Fossil UI](https://github.com/bbbbbrie/til/blob/main/fossil/howto-actually-logout-fossil.md) - 2023-03-18
+
+## git
+
+* [Find current git signing key + scope with git config](https://github.com/bbbbbrie/til/blob/main/git/git-find-current-signingkey.md) - 2023-07-29
 
 ## github
 
@@ -112,4 +120,8 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 ## ssh
 
 * [Verify your SSH key passphrase](https://github.com/bbbbbrie/til/blob/main/ssh/validate-ssh-key-passphrase.md) - 2022-12-30
+
+## vim
+
+* [HOWTO Use Vim to open a file right at the line number you specify](https://github.com/bbbbbrie/til/blob/main/vim/open-file-directly-at-specified-line-number.md) - 2023-05-10
 <!-- index ends -->
