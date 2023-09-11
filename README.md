@@ -4,7 +4,7 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->40<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->41<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## ansible
@@ -104,6 +104,10 @@ Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀
 
 * [Specify the time zone to use with the date command](https://github.com/bbbbbrie/til/blob/main/linux/specify-time-zone-date-command.md) - 2023-05-10
 * [Reload the screenrc config -- without leaving screen](https://github.com/bbbbbrie/til/blob/main/linux/reload-screenrc-in-same-session.md) - 2022-12-11
+
+## rsync
+
+* [Ask rsync to respect .gitignore](https://github.com/bbbbbrie/til/blob/main/rsync/ask-rsync-honor-gitignore.md) - 2023-09-10
 
 ## saml
 
