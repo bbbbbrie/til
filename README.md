@@ -4,12 +4,16 @@
 
 Search these TILs at [til.brie.dev](https://til.brie.dev). 🚀  
 
-<!-- count starts -->42<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->43<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## ansible
 
 * [Generate sample ansible.cfg config file](https://github.com/bbbbbrie/til/blob/main/ansible/generate-sample-ansible-cfg-file.md) - 2023-05-13
+
+## archivebox
+
+* [Turn off the Wayback Machine Archive Method in archivebox](https://github.com/bbbbbrie/til/blob/main/archivebox/turn-waybackmachine-archive-method-off-archivebox.md) - 2023-09-25
 
 ## aws
 
